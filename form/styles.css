@@ -1,0 +1,172 @@
+:root {
+  --bg: #ffffff;
+  --border: #bdbdbd;
+  --text: #222;
+  --green: #0a8f3c;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  margin: 0;
+  background: #fff;
+  color: var(--text);
+}
+
+.frame {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.topbar {
+  height: 125px;
+  border-bottom: 2px solid #777;
+  position: relative;
+  background: #fff;
+}
+
+.window-dots {
+  position: absolute;
+  top: 18px;
+  left: 18px;
+  display: flex;
+  gap: 10px;
+}
+
+.dot {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  border: 2px solid #888;
+  background: #fff;
+}
+
+.tab {
+  position: absolute;
+  top: 10px;
+  left: 200px;
+  width: 92px;
+  height: 26px;
+  border: 2px solid #777;
+  border-bottom: none;
+  border-radius: 8px 8px 0 0;
+  background: #fff;
+}
+
+.navline {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 48px;
+  height: 42px;
+  border-top: 2px solid #777;
+  border-bottom: 2px solid #777;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 0 18px;
+}
+
+.navicons {
+  font-size: 28px;
+  color: #666;
+  letter-spacing: 2px;
+}
+
+.address {
+  flex: 1;
+  height: 30px;
+  border: 2px solid #777;
+  border-radius: 4px;
+  background: #fff;
+}
+
+.content {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 360px 1fr;
+  gap: 28px;
+  padding: 70px 90px 40px;
+  align-items: start;
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  max-width: 320px;
+}
+
+input, textarea, button {
+  width: 100%;
+  font-size: 16px;
+}
+
+input, textarea {
+  border: 2px solid var(--border);
+  padding: 10px 12px;
+  outline: none;
+  background: #fff;
+}
+
+textarea {
+  min-height: 88px;
+  resize: vertical;
+}
+
+button {
+  padding: 14px 12px;
+  border: 2px solid var(--border);
+  background: #fff;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #f3f3f3;
+}
+
+.right {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.label {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+#response {
+  min-height: 640px;
+  border: 2px solid var(--border);
+  padding: 14px;
+  resize: none;
+  background: #fff;
+  font-family: Consolas, monospace;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.footer {
+  text-align: right;
+  padding: 0 24px 18px;
+  color: var(--green);
+  font-size: 22px;
+  font-weight: 700;
+}
+
+@media (max-width: 900px) {
+  .content {
+    grid-template-columns: 1fr;
+    padding: 24px;
+  }
+
+  #response {
+    min-height: 320px;
+  }
+}
